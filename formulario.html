@@ -59,47 +59,40 @@
     <!--Elememtno de Contenido central-->
     <div class="center">
         <section id="content">
-            <h2 class="subheader">Últimos artículos</h2>
 
-            <script type="text/javascript">
-                window.addEventListener("load", function(){
-                    var template = document.getElementById("article-template");
-                    var articles = document.getElementById("articles");
-                    
-                    for (var i = 1; i <= 5; i++) {
-                        var clonado = template.cloneNode(true);
-                        clonado.removeAttribute("id");
-                        var h2 = clonado.getElementsByTagName("h2")[0];
-                        console.log(h2);
-                        h2.innerHTML = h2.textContent + ' ' + i;
-                        articles.appendChild(clonado);
-                    }
-
-                });
-
-            </script>
-
-            <div id="articles">
-                <article class="article-item" id="article-template">
-                    <div class="image-wrap">
-                        <img src="https://www.lugaresturisticos.org/wp-content/uploads/2018/09/lago.jpg" alt="SMA" />
-                    </div>
-                    <h2>Artículo de test</h2>
-                    <span class="date">
-                        Hace 5 mins
-                    </span>
-                    <a href="">Leer más</a>
-                    <div class="clearfix"></div>
-                </article>
-
-                <!--Añade artículos via JS-->
-
-
-
-            </div>
-
-
+            <h1 class="subheader">
+                Formulario
+            </h1>
             
+            <form class="mid-form">
+                <div class="form-group">
+                    <label for="nombres">Nombres</label>
+                    <input type="text" name="nombres" />
+                </div>
+
+                <div class="form-group">
+                    <label for="apellidos">Apellidos</label>
+                    <input type="text" name="apellidos" />
+                </div>
+
+                <div class="form-group">
+                    <label for="bio">Bio</label>
+                    <textarea name="bio" id="" cols="30" rows="10"></textarea>
+                </div>
+
+                <div class="form-group radiobuttons">
+                    <input type="radio" name="genero" value="Femenino" /> Femenino
+                    <input type="radio" name="genero" value="Masculino" /> Masculino
+                    <input type="radio" name="genero" value="Otro" /> Otro
+                </div>
+
+                <div class="clearfix"></div>
+ 
+                <input type="submit" value="Enviar" class="btn btn-success" />
+            </form>
+
+
+
         </section>
 
 
